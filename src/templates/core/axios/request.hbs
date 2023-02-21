@@ -92,7 +92,7 @@ export const request = <T>(config: OpenAPIConfig, options: ApiRequestOptions, ax
 					headers: response.headers,
 				};
 
-				if (response.headers["Location"]) {
+				if (response.headers["location"]) {
 					throw new ApiError(options, result, "redirect")
 				}
 
